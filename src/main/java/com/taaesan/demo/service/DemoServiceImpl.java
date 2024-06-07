@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class DemoServiceImpl implements DemoService{
@@ -13,15 +14,15 @@ public class DemoServiceImpl implements DemoService{
     }
 
     @Override
-    public Integer[] findTwoSum(Integer[] numbers, int target) {
+    public Optional<Integer[]> findTwoSum(Integer[] numbers, int target) {
         Map<Integer, Integer> indexMap = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
             int complement = target - numbers[i];
             if (indexMap.containsKey(complement)) {
-                return new Integer[] { indexMap.get(complement), i };
+                return Optional.of(new Integer[]{indexMap.get(complement), i});
             }
             indexMap.put(numbers[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return Optional.empty();
     }
 }

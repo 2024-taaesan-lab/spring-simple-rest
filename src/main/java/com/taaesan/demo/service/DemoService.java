@@ -1,7 +1,9 @@
 package com.taaesan.demo.service;
 
+import java.util.Optional;
+
 public interface DemoService {
 
     String hello();
-    public Integer[] findTwoSum(Integer[] numbers, int target);
+    public Optional<Integer[]> findTwoSum(Integer[] numbers, int target);
 }
