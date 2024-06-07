@@ -1,2 +1,12 @@
 ###
 GET http://localhost:8081/api/v1/demo/
+
+
+###
+POST http://localhost:8081/api/v1/demo/findTwoSum
+Content-Type: application/json
+
+{
+    "numbers":[1,3,5,9,11],
+    "target": 8
+}

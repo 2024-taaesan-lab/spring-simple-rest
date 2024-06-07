@@ -4,6 +4,9 @@ pipeline {
             label 'docker-agent-java17'
         }
     }
+    triggers {
+        pollSCM '*/2 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
