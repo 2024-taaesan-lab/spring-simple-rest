@@ -9,7 +9,7 @@ import java.util.Map;
 public class DemoServiceImpl implements DemoService{
     @Override
     public String hello() {
-        return "";
+        return "hello";
     }
 
     @Override

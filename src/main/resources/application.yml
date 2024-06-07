@@ -1,4 +1,11 @@
 spring:
   profiles:
     active: dev
+  main:
+    banner-mode: "off"
+logging:
+  level:
+    root: "ERROR" # Set the root logging level to INFO (can be DEBUG, ERROR, WARN, etc.)
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" # Customize the logging pattern for the console
 
